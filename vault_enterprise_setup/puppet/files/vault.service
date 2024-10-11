@@ -1,0 +1,16 @@
+[Unit]
+Description="HashiCorp Vault"
+Documentation=https://www.vaultproject.io/
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+ExecStart=/usr/local/bin/vault server -config=/etc/vault.d/vault.hcl
+ExecReload=/bin/kill --signal HUP $MAINPID
+KillMode=process
+Restart=on-failure
+LimitMEMLOCK=infinity
+OOMScoreAdjust=-1000
+
+[Install]
+WantedBy=multi-user.target

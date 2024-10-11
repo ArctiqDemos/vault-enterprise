@@ -1,0 +1,6 @@
+forge 'https://forge.puppet.com'
+
+mod 'puppetlabs-stdlib', '7.1.0'
+mod 'puppetlabs-firewall', '5.0.1'
+mod 'puppetlabs-vault', '1.0.0'
+mod 'puppetlabs-gcp', '1.0.0'
